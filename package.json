@@ -1,0 +1,14 @@
+{
+  "name": "homelessfounders",
+  "version": "1.0.0",
+  "description": "Housing platform for early-stage founders",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve ."
+  },
+  "keywords": ["founders", "housing", "startup", "community"],
+  "author": "Homeless Founders",
+  "license": "MIT"
+}

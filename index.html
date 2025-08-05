@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeless Founders - Housing for Early-Stage Entrepreneurs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Header -->
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                Homeless Founders
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                サンフランシスコの高い家賃で困っている若いファウンダーのための、
+                安全で手頃な住居シェアプラットフォーム
+            </p>
+
+            <!-- Problem Statement -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">なぜHomeless Foundersなのか？</h2>
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🏠</div>
+                        <h3 class="text-lg font-semibold mb-2">高い家賃</h3>
+                        <p class="text-gray-600">サンフランシスコの家賃は月$3000+。初期のスタートアップには厳しい現実</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-lg font-semibold mb-2">コミュニティ</h3>
+                        <p class="text-gray-600">同じ志を持つファウンダー同士で支え合い、ネットワーキングも</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🔒</div>
+                        <h3 class="text-lg font-semibold mb-2">安全性</h3>
+                        <p class="text-gray-600">身元確認済みのファウンダーのみ。安心して利用できるプラットフォーム</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-6">ウェイティングリストに参加</h2>
+                <p class="text-gray-600 mb-8">
+                    プラットフォームの準備ができ次第、優先的にご案内します
+                </p>
+                
+                <form id="waitlistForm" class="max-w-md mx-auto">
+                    <div class="mb-4">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="メールアドレス" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                    </div>
+                    <div class="mb-4">
+                        <select 
+                            id="role" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                            <option value="">あなたの立場は？</option>
+                            <option value="founder">ファウンダー（住居を探している）</option>
+                            <option value="host">ホスト（住居を提供したい）</option>
+                            <option value="both">両方</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <input 
+                            type="text" 
+                            id="company" 
+                            placeholder="会社名・プロジェクト名（任意）" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                    </div>
+                    <button 
+                        type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+                    >
+                        ウェイティングリストに参加
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg">
+                    ありがとうございます！ウェイティングリストに追加されました。
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-16 text-gray-500">
+                <p>&copy; 2024 Homeless Founders. Made with ❤️ for the startup community.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form handling - in production, you'd send this to a backend
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+            const company = document.getElementById('company').value;
+            
+            // For now, just show success message
+            document.getElementById('waitlistForm').style.display = 'none';
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // In production, you'd send this data to your backend:
+            console.log('Waitlist signup:', { email, role, company });
+        });
+    </script>
+</body>
+</html>
