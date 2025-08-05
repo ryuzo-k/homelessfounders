@@ -163,13 +163,17 @@
     <p>Be part of a worldwide network of founders helping each other find homes.</p>
     
     <form id="waitlistForm">
+        <div class="form-group">
+          <label for="role">I am a:</label>
+          <select id="role" name="role" required>
+            <option value="">Select one...</option>
+            <option value="Founder">Founder (need housing)</option>
+            <option value="Host">Host (have space to offer)</option>
+            <option value="Both">Both</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Note: Please select from the predefined options</p>
+        </div>
         <input type="email" id="email" placeholder="Email address" required>
-        <select id="role" required>
-            <option value="">What describes you?</option>
-            <option value="founder">Founder (looking for housing)</option>
-            <option value="host">Host (offering housing)</option>
-            <option value="both">Both</option>
-        </select>
         <input type="text" id="company" placeholder="Company/Project name (optional)">
         <button type="submit">Join Waitlist</button>
     </form>
