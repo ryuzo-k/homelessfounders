@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx serve .",
-    "build": "echo 'Static site - no build needed'",
+    "build": "mkdir -p public && cp index.html public/ && cp -r api public/ 2>/dev/null || true",
     "start": "npx serve ."
   },
   "keywords": ["founders", "housing", "startup", "community"],
