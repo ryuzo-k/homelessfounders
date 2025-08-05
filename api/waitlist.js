@@ -24,9 +24,7 @@ export default async function handler(req, res) {
         fields: {
           'Email': email,
           'Role': role,
-          'Company': company || '',
-          'Timestamp': new Date().toISOString().split('T')[0], // YYYY-MM-DD format
-          'Source': 'Website'
+          'Signup Date': new Date().toISOString().split('T')[0] // YYYY-MM-DD format
         }
       }]
     };
