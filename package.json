@@ -10,8 +10,5 @@
   },
   "keywords": ["founders", "housing", "startup", "community"],
   "author": "Homeless Founders",
-  "license": "MIT",
-  "engines": {
-    "node": "22.x"
-  }
+  "license": "MIT"
 }
