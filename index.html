@@ -102,6 +102,47 @@
             cursor: not-allowed;
         }
         
+        .donate-button {
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            margin: 20px 0;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+        
+        .donate-button:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .developer-section {
+            background: #f8f8f8;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px solid #000000;
+            text-align: center;
+        }
+        
+        .developer-section h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 0 0 15px 0;
+        }
+        
+        .developer-section p {
+            margin: 10px 0;
+            color: #333333;
+        }
+        
         .success {
             background: #000000;
             color: #ffffff;
@@ -179,6 +220,14 @@
     
     <div id="successMessage" class="success">
         Thank you! You've been added to the waitlist.
+    </div>
+
+    <div class="developer-section">
+        <h3>About the Developer</h3>
+        <p>This project is built by <strong>Ryuzo Kijima</strong>, a high school dropout passionate about helping founders find homes worldwide.</p>
+        <p>This platform is completely <strong>non-profit</strong> and built to serve the startup community.</p>
+        <p>If you'd like to support this mission, consider making a donation:</p>
+        <a href="https://ryuzo.support" target="_blank" class="donate-button">💝 Support This Project</a>
     </div>
 
     <hr>
