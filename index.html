@@ -250,10 +250,26 @@
             submitBtn.disabled = true;
             
             try {
-                // For now, just show success message (API temporarily disabled)
-                // TODO: Re-enable API integration once deployment is stable
-                document.getElementById('waitlistForm').style.display = 'none';
-                document.getElementById('successMessage').style.display = 'block';
+                // Send to secure API endpoint
+                const response = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        role: role,
+                        company: company
+                    })
+                });
+                
+                if (response.ok) {
+                    // Success
+                    document.getElementById('waitlistForm').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                } else {
+                    throw new Error('Failed to submit');
+                }
             } catch (error) {
                 // Show error message
                 alert('Sorry, there was an error submitting your information. Please try again.');
